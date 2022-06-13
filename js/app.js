@@ -50,9 +50,12 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-  let sum = a + b + c;
-  let mult = a * b *c;
-  return [sum, mult, `${a} and ${b} and ${c} sum to ${sum}.`, `The product of ${a} and ${b} and ${c} is ${mult}.`]
+  let sum1 = sum(sum(a,b)[0], c)[0];
+  let mult1 = multiply(a,b);
+  let mult2 = multiply(c,mult1[0])[0];
+
+
+  return [sum1, mult2, `${a} and ${b} and ${c} sum to ${sum1}.`, `The product of ${a} and ${b} and ${c} is ${mult2}.`]
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
